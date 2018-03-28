@@ -1,6 +1,6 @@
 classes= 1
-train  = F:/home/yanhe/data/CelebA/trainval.txt
-valid  = F:/home/yanhe/data/CelebA/test.txt
+train  = D:/workspace-jee/darknet4j_22/data/CelebA/trainval.txt
+valid  = D:/workspace-jee/darknet4j_22/data/CelebA/test.txt
 names = face.names
 backup = backup/
 
