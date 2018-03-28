@@ -1,0 +1,80 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.darknet</groupId>
+	<artifactId>darknet4j_22</artifactId>
+	<packaging>jar</packaging>
+	<version>1.0-SNAPSHOT</version>
+	<name>darknet4j_22</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<encoding>UTF-8</encoding>
+		<java.version>1.8</java.version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.2</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>darknet_jni</groupId>
+			<artifactId>darknet_jni</artifactId>
+			<version>0.1.0</version>
+		</dependency>
+		<!-- mvn install:install-file -Dfile=C:\opencv-3.4.0-vc14_vc15\opencv\build\java\opencv-340.jar 
+			-DgroupId=opencv -DartifactId=opencv -Dversion=340 -Dpackaging=jar -->
+		<dependency>
+			<groupId>opencv</groupId>
+			<artifactId>opencv</artifactId>
+			<version>340</version>
+			<!-- <scope>system</scope> <systemPath>C:\\opencv-3.4.0-vc14_vc15\\opencv\\build\\java\\opencv-340.jar</systemPath> -->
+		</dependency>
+		<!-- <dependency> This is without the stuff for windows. <groupId>nu.pattern</groupId> 
+			<artifactId>opencv</artifactId> <version>2.4.9-7</version> </dependency> -->
+		<!-- <dependency> <groupId>org.bytedeco</groupId> <artifactId>javacv</artifactId> 
+			<version>0.11</version> </dependency> <dependency> <groupId>org.bytedeco</groupId> 
+			<artifactId>javacpp</artifactId> <version>0.11</version> </dependency> -->
+		<dependency>
+			<groupId>org.bytedeco</groupId>
+			<artifactId>javacv-platform</artifactId>
+			<!-- <version>1.3.3</version> -->
+			<version>1.3.1</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<appendAssemblyId>false</appendAssemblyId>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+					<archive>
+						<manifest>
+							<mainClass>com.test.CelebA2VOC</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id>
+						<phase>package</phase>
+						<goals>
+							<goal>assembly</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

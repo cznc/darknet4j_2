@@ -1,0 +1,5 @@
+package cn.drknt.lib;
+
+public enum ACTIVATION {
+	LOGISTIC, RELU, RELIE, LINEAR, RAMP, TANH, PLSE, LEAKY, ELU, LOGGY, STAIR, HARDTAN, LHTAN
+}

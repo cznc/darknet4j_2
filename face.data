@@ -1,0 +1,6 @@
+classes= 1
+train  = F:/home/yanhe/data/CelebA/trainval.txt
+valid  = F:/home/yanhe/data/CelebA/test.txt
+names = face.names
+backup = backup/
+
