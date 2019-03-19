@@ -4,7 +4,7 @@ This java project is migrated from [darknet](https://github.com/pjreddie/darknet
 
 The file darknet_jni_wrapper.dll is for win7 x64, compiled by vc++2015, functions of read/write png of stbi(an image lib in stb_image.h and stb_image_write.h).
 
-The program enter is java class cn.darknet.(By convention, Java type names usually start with an uppercase letter. But here we not.)
+The program enter is java class cn.darknet.(By convention, Java class names usually start with an uppercase letter. But here we not. We will as possible as closer to C code.)
  The training and testing data set is [CelebA](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html), some sample of it in the directory data/CelebA/.
 
 IDE is eclipse with a maven plugin supported.
