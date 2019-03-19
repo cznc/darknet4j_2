@@ -1,4 +1,3 @@
-#Darknet4j_2#
 This java project is migrated from [darknet](https://github.com/pjreddie/darknet), and only implemented the part of detector train and detector test by now.
  Originally, we want it as a bridge to Neural-Networks/Deep-Learning for a java programmer.
 
